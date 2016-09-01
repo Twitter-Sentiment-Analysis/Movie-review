@@ -54,8 +54,8 @@ sentimentScore <- function(sentences, vNegTerms, negTerms, posTerms, vPosTerms){
 }    
  
 #build tables of positive and negative sentences with scores
-posResult <- as.data.frame(sentimentScore(df$text, vNegTerms, negTerms, posTerms, vPosTerms))
-negResult <- as.data.frame(sentimentScore(df$text, vNegTerms, negTerms, posTerms, vPosTerms))
+posResult <- as.data.frame(sentimentScore(posText, vNegTerms, negTerms, posTerms, vPosTerms))
+negResult <- as.data.frame(sentimentScore(negText, vNegTerms, negTerms, posTerms, vPosTerms))
 posResult <- cbind(posResult, 'positive')
 colnames(posResult) <- c('sentence', 'vNeg', 'neg', 'pos', 'vPos', 'sentiment')
 negResult <- cbind(negResult, 'negative')
