@@ -40,7 +40,7 @@ tweets = rbind(posdf, negdf, sample_df)
 matrix = create_matrix(tweets[,1], language = "english", removeStopwords=FALSE, removeNumbers=TRUE, stemWords=FALSE) 
 
 mat = as.matrix(matrix)
-train_dataset_len = 2*nrow(sample_df)
+train_dataset_len = 2*nrow(sample_df) #length of posdf+negdf i.e. total length of trained dataset
 classifier = naiveBayes(mat[1:train_dataset_len,], as.factor(tweets[1:train_dataset_len,2]))
 predicted = predict(classifier, mat[train_dataset_len+1:train_dataset_len+nrow(sample_df),]); predicted
 
