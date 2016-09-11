@@ -18,7 +18,7 @@ vPosTerms <- c(afinn_list$word[afinn_list$score==5 | afinn_list$score==4], "upro
 posText <- read.delim(file='G:/Mita/Twitter Sentiment Analysis/rt-polaritydata/rt-polarity_pos.txt', header=FALSE, stringsAsFactors=FALSE)
 posText <- posText$V1
 posText <- unlist(lapply(posText, function(x) { str_split(x, "\n") }))
-negText <- read.delim(file='polarityData/rt-polaritydata/rt-polarity-neg.txt', header=FALSE, stringsAsFactors=FALSE)
+negText <- read.delim(file='G:/Mita/Twitter Sentiment Analysis/polarityData/rt-polaritydata/rt-polarity_neg.txt', header=FALSE, stringsAsFactors=FALSE)
 negText <- negText$V1
 negText <- unlist(lapply(negText, function(x) { str_split(x, "\n") }))    
  
