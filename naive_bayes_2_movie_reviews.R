@@ -21,6 +21,11 @@ library(e1071)
 
 #sample contains the textual part of the extracted tweets.
 #See related programs for details
+#t=searchTwitter('Jungle+Book', n=500)
+#df <- do.call("rbind", lapply(t, as.data.frame))
+#df$text <- sapply(df$text,function(row) iconv(row, "latin1", "ASCII", sub=""))
+#sample=df$text
+
 sample_df = as.data.frame(sample)
 
 #Randomly a sentiment is assigned since this serves no purpose in the final result
