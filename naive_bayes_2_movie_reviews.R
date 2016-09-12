@@ -54,5 +54,6 @@ predicted = predict(classifier, mat[4001:4500,]); predicted
 
 #following is just for testing purposes(maybe ignored)
 table(tweets[train_dataset_len+1:train_dataset_len+nrow(sample_df),2], predicted)
-recall_accuracy(tweets[train_dataset_len+1:train_dataset_len+nrow(sample_df)],2], predicted)
+#recall_accuracy(tweets[train_dataset_len+1:train_dataset_len+nrow(sample_df)],2], predicted)
+recall_accuracy(tweets[4001:4500,2], predicted)
 
